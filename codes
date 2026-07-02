@@ -1,0 +1,91 @@
+# Problem 1: Collect Patient Information
+
+print("=" * 45)
+print(" SMART BMI & HEALTH RISK ANALYZER ")
+print("=" * 45)
+
+name = input("Enter Patient Name: ")
+age = int(input("Enter Age (Years): "))
+weight = float(input("Enter Weight (kg): "))
+height = float(input("Enter Height (m): "))
+
+  #-----------------------------------------
+  
+  # Problem 2: Calculate BMI
+  
+# BMI = Weight / (Height × Height)
+bmi = weight / (height * height)
+print(f"Calculated BMI : {bmi:.2f}")
+
+  #------------------------------------------
+  
+  # Problem 3: BMI Category and Health Risk
+if bmi < 18.5:
+    category = "Underweight"
+elif bmi < 25:
+    category = "Normal Weight"
+elif bmi < 30:
+    category = "Overweight"
+else:
+    category = "Obese"
+# Health Risk
+if bmi > 30 and age > 40:
+    health_risk = "High Health Risk"
+else:
+    health_risk = "Normal Risk"
+print(f"BMI Category : {category}")
+print(f"Health Risk : {health_risk}")
+
+  #-----------------------------------------
+
+
+  # Problem 4: Generate Health Report
+print("\n" + "=" * 45)
+print("        HEALTH REPORT")
+print("=" * 45)
+print(f"Patient Name   : {name}")
+print(f"Age            : {age} Years")
+print(f"Weight         : {weight} kg")
+print(f"Height         : {height} m")
+print(f"Calculated BMI : {bmi:.2f}")
+print(f"BMI Category   : {category}")
+print(f"Health Risk    : {health_risk}")
+# Health Recommendation
+if category == "Underweight":
+    advice = "Increase calorie intake and consult a nutritionist."
+elif category == "Normal Weight":
+    advice = "Maintain your current healthy lifestyle."
+elif category == "Overweight":
+    advice = "Increase physical activity and improve diet."
+else:
+    advice = "Consult a healthcare professional and follow a weight management plan."
+print("\nHealth Recommendation")
+print(advice)
+print("=" * 45)
+print("Thank you for using Smart BMI & Health Risk Analyzer")
+print("=" * 45)
+
+ #-----------------------------------------
+ #-----------------------------------------
+ #-----------------------------------------
+
+
+
+#------challenges-------
+
+
+# Challenge 1: Daily Water Intake Calculator
+# Water Intake (ml) = Weight × 35
+water_intake = weight * 35
+print("===== Daily Water Intake =====")
+print(f"Recommended Water Intake : {water_intake:.0f} ml/day")
+
+
+  # Challenge 2: Weight Difference Calculator
+# Ideal Weight = 22 × Height²
+ideal_weight = 22 * (height ** 2)
+weight_difference = weight - ideal_weight
+print("===== Weight Difference Calculator =====")
+print(f"Current Weight    : {weight:.1f} kg")
+print(f"Ideal Weight      : {ideal_weight:.1f} kg")
+print(f"Weight Difference : {weight_difference:.1f} kg")
